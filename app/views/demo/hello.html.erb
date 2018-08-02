@@ -1,0 +1,19 @@
+<h1>
+  <%= @hello_title %>
+</h1>
+
+<!--
+<br/>
+<% @array.each do |n| %>
+  <h2><%= n %></h2><br/>
+<% end %>
+-->
+
+<br />
+<%= link_to('Index', {:action => 'index'}) %>
+
+<br /><br />
+ID: <%= @id %><br />
+ID: <%= params[:id] %><br />
+Page: <%= @page %><br />
+Next Page: <%= @page.to_i + 1 %><br />
