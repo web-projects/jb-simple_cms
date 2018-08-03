@@ -6,6 +6,7 @@ class DemoController < ApplicationController
 
     # this is the default action
     render('index')
+
   end
 
   def hello
@@ -16,6 +17,7 @@ class DemoController < ApplicationController
     @array = [1,2,3,4,5]
     # this is the default action
     render(:template => 'demo/hello')
+
   end
 
   # redirect

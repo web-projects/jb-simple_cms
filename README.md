@@ -1,4 +1,4 @@
-Stabile Tech Ruby on Rails with MySQL CMS Application
+SerenataWeb | Ruby on Rails with MySQL CMS Application
 ================================================================================
 
 # REPOSITORY
@@ -31,8 +31,8 @@ git remote add origin git@github.com:web-projects/simple_cms.git
 
   From the root of the project:
 
-  $ heroku create jb-simple_cms
+  $ heroku create jb-simple-cms
 
-  https://jb-simple_cms.herokuapp.com/
+  https://jb-simple-cms.herokuapp.com/
 
   $ git push heroku master
