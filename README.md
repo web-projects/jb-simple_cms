@@ -47,6 +47,6 @@ git remote add origin git@github.com:web-projects/simple_cms.git
 
   $ heroku create jb-simple-cms
 
-  https://jb-simple-cms.herokuapp.com/
+  https://jb-simple-cms.herokuapp.com
 
   $ git push heroku master
