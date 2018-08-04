@@ -27,4 +27,8 @@ class DemoController < ApplicationController
     redirect_to(:action => 'hello')
   end
 
+  def escape_output
+
+  end
+
 end

@@ -1,0 +1,10 @@
+<% evil_string = "<script>alert('Gotcha!');</script>" %>
+<% good_string = "<strong>Welcome to my Site!</strong>" %>
+
+<%= "UNESCAPED HTML" %><br/>
+<%= evil_string.html_safe %><br/>
+<%= raw good_string %><br/><br/>
+
+<%= "ESCAPED HTML" %><br/>
+<%= evil_string %><br/>
+<%= raw good_string %><br/>

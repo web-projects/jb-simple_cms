@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-
   # ROOT INDEX
   root 'demo#index'
 
@@ -25,5 +24,8 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+
+  # DEMO ONLY
+  get 'demo/escape_output'
 
 end
