@@ -23,6 +23,7 @@ git remote add origin git@github.com:web-projects/simple_cms.git
 -----------------
 
     $ 2018/08/02 - Initial repository.
+    $ 2018/08/03 - Added Pages and Sections.
 
 
 # -------------------------------------------------
