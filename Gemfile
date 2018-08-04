@@ -35,11 +35,9 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-
 group :development, :test do
   # Use mysql as the database for Active Record
-  #gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+  gem 'mysql2', '>= 0.4.4', '< 0.6.0'
   # COMPATIBILITY ISSUES WHEN MIGRATING TO HEROKU
   #gem 'mysql2', '~> 0.3.18'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
