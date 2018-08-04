@@ -12,6 +12,7 @@ class CreatePages < ActiveRecord::Migration[5.2]
     end
     add_index("pages", "subject_id")
     add_index("pages", "permalink")
+
   end
 
   def down

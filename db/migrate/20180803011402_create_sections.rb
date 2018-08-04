@@ -1,6 +1,7 @@
 class CreateSections < ActiveRecord::Migration[5.2]
 
   def up
+
     create_table :sections do |t|
       t.column "page_id", :integer
       t.string "name"
@@ -11,6 +12,7 @@ class CreateSections < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_index("sections", "page_id")
+
   end
 
   def down

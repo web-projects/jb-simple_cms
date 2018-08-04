@@ -1,5 +1,7 @@
 class DemoController < ApplicationController
 
+  layout false
+
   def index
 
     @index_title = "Index World!"
