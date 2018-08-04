@@ -10,11 +10,12 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  adapter: mysql2
+  #adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: webuser
-  password: falcone1
+  username: <%= ENV['SIMPLE_CMS_DATABASE_USERNAME'] %>
+  password: <%= ENV['SIMPLE_CMS_DATABASE_PASSWORD'] %>
   socket: /tmp/mysql.sock
 
 development:
@@ -50,5 +51,5 @@ test:
 production:
   <<: *default
   database: simple_cms_production
-  username: simple_cms
+  username: <%= ENV['SIMPLE_CMS_DATABASE_USERNAME'] %>
   password: <%= ENV['SIMPLE_CMS_DATABASE_PASSWORD'] %>

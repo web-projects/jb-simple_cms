@@ -15,6 +15,19 @@ git remote add origin git@github.com:web-projects/simple_cms.git
   * GRANT ALL PRIVILEGES ON simple_cms_test.* TO 'webuser'@'localhost' WITH GRANT OPTION;
   * UPDATE db credentials in database.yml and TEST: $ rails db:schema:dump
 
+  * MIGRATE to PostgreSQL database:
+
+    1. install gem:
+
+      gem install valkyrie
+
+    https://www.datachomp.com/archives/quickly-migrate-a-db-from-mysql-to-postgres/
+
+    2.  MIGRATE DB
+
+        valkyrie mysql://datachomp@localhost/seppuku?password=QuickAndPainless postgres://datachomp@127.0.0.1/seppuku
+
+
 # To run:
 
     $ bin/rails server
