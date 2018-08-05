@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   end
 
   # DEMO ONLY
+  get 'demo/index'
+  get 'demo/hello'
   get 'demo/escape_output'
 
 end

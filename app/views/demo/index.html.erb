@@ -5,4 +5,17 @@
 <br />
 <%= link_to('Hello', {:action => 'hello'}) %>
 
+<br />
+<br />
 <%= link_to('Hello with parameters', {:action => 'hello', :page => 5, :id => 20}) %>
+
+<br />
+<br />
+<%= link_to('Roar', '#', :onclick => "jsRoar('JavaScript'); return true;") %>
+
+
+<br />
+<br />
+<% text = "'); alert('Gotcha!')'" %>
+<!-- USE SANITIZED VERSION with escape_javascript() or j() -->
+<%= javascript_tag("alert('You said: #{j(text)}');") %>
