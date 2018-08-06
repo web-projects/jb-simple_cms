@@ -83,7 +83,7 @@ class SubjectsController < ApplicationController
 
   def set_subject_count
     @subject_count = Subject.count
-    if(params[:action] == 'new' || params[:action] == 'create')
+    if params[:action] == 'new' || params[:action] == 'create'
       @subject_count += 1
     end
   end

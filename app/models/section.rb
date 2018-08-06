@@ -17,9 +17,10 @@ class Section < ApplicationRecord
   #validates_presence_of :content
 
   validates :name, :presence => true,
-                    :length => { :maximum => 255 },
-                    :inclusion => { :in => CONTENT_TYPES,
-                                    :message => "must be one of: #{CONTENT_TYPES.join(', ')}" }
+                   :length => { :maximum => 255 }
+
+  validates :content_type, :inclusion => { :in => CONTENT_TYPES,
+                                           :message => "must be one of: #{CONTENT_TYPES.join(', ')}" }
 
   validates :content, :presence => true
 
