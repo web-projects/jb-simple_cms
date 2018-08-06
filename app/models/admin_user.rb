@@ -43,7 +43,7 @@ class AdminUser < ApplicationRecord
                     :confirmation => true
 
   validate :username_is_allowed
-  validate :no_new_users_on_monday, :on => :create
+  validate :no_new_users_on_friday, :on => :create
 
   # ************************************************************************* #
   private
@@ -55,9 +55,9 @@ class AdminUser < ApplicationRecord
     end
   end
 
-  def no_new_users_on_monday
-    if Time.now.wday == 1
-      errors.add(:base, "No new users on Mondays.")
+  def no_new_users_on_friday
+    if Time.now.wday == 5
+      errors.add(:base, "No new users on Fridays.")
     end
   end
 
