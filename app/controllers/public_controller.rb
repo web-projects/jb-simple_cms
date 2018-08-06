@@ -18,7 +18,9 @@ class PublicController < ApplicationController
     end
   end
 
+  # ************************************************************************* #
   private
+  # ************************************************************************* #
 
   def setup_navigation
     @subjects = Subject.visible.sorted

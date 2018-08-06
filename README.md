@@ -41,7 +41,8 @@ git remote add origin git@github.com:web-projects/simple_cms.git
     $ 2018/08/05 - Added Form validation.
                  - Added Login/Logout protection.
                  - Added Admin User Processing.
-                 
+    $ 2018/08/06 - Completed first round of improvements.
+
 # -------------------------------------------------
 # HEROKU HOSTING
 # -------------------------------------------------
