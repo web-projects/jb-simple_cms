@@ -2,6 +2,10 @@ class AdminUser < ApplicationRecord
 
   #self.table_name = "admin_users"
 
+  # creates attr_reader password
+  # encrypted with blowfish automatically
+  has_secure_password
+
   has_and_belongs_to_many :pages
 
   has_many :section_edits

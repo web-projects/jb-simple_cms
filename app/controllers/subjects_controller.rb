@@ -2,8 +2,14 @@ class SubjectsController < ApplicationController
 
   layout 'admin'
 
+  # WHITELIST APPROACH TO FORCE DEFAULT PAGES TO LOGIN
+  before_action  :confirm_logged_in
+
+  before_action :set_subject_count, :only => [:new, :create, :edit, :update]
+
   def index
     @subjects = Subject.sorted
+    #logger.debug("***** subject name=[#{@subjects.find(1).name}] *****")
   end
 
   def show
@@ -12,7 +18,7 @@ class SubjectsController < ApplicationController
 
   def new
     @subject = Subject.new({:name => 'Default'})
-    @subject_count = Subject.count + 1
+    #@subject_count = Subject.count + 1
   end
 
   def create
@@ -27,7 +33,7 @@ class SubjectsController < ApplicationController
       redirect_to(subjects_path)
     else
       # If save fails, rediplay the form so user can fix problems
-      @subject_count = Subject.count + 1
+      #@subject_count = Subject.count + 1
       render('new')
     end
 
@@ -35,7 +41,7 @@ class SubjectsController < ApplicationController
 
   def edit
     @subject = Subject.find(params[:id])
-    @subject_count = Subject.count
+    #@subject_count = Subject.count
   end
 
   def update
@@ -50,7 +56,7 @@ class SubjectsController < ApplicationController
       redirect_to(subject_path(@subject))
     else
       # If save fails, rediplay the form so user can fix problems
-      @subject_count = Subject.count
+      #@subject_count = Subject.count
       render('edit')
     end
 
@@ -74,5 +80,13 @@ class SubjectsController < ApplicationController
   def subject_params
     params.require(:subject).permit(:name, :position, :visible, :created_at)
   end
+
+  def set_subject_count
+    @subject_count = Subject.count
+    if(params[:action] == 'new' || params[:action] == 'create')
+      @subject_count += 1
+    end
+  end
+
 
 end
